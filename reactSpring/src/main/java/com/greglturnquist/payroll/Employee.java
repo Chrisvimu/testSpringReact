@@ -1,7 +1,18 @@
-@Entity (1)
+package com.greglturnquist.payroll;
+
+import java.util.Objects;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Version;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+                
+@Entity
 public class Employee {
 
-	private @Id @GeneratedValue Long id; (2)
+	private @Id @GeneratedValue Long id;
 	private String firstName;
 	private String lastName;
 	private String description;
